@@ -1,0 +1,102 @@
+/* ====== Cấu trúc tổng thể ====== */
+.admin-layout {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f6f8;
+}
+
+/* ====== MENU BÊN TRÁI ====== */
+.admin-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px; /* rộng hơn một chút cho rõ ràng */
+  height: 100vh;
+  background-color: #212529;
+  color: #fff;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== PHẦN NỘI DUNG CHÍNH ====== */
+.outlet-container {
+  margin-left: 240px; /* bằng chiều rộng menu */
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 24px;
+  transition: all 0.3s ease;
+  border-left: 1px solid #dee2e6;
+}
+
+/* ====== Nút mở menu trên mobile ====== */
+.menu-toggle-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: none;
+}
+
+/* ====== Overlay khi mở menu trên mobile ====== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+.menu-overlay.show {
+  display: block;
+}
+
+/* ====== Tablet & mobile ====== */
+@media (max-width: 992px) {
+  .admin-menu-container {
+    transform: translateX(-100%);
+    width: 220px;
+  }
+
+  .admin-menu-container.menu-open {
+    transform: translateX(0);
+  }
+
+  .outlet-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+}
+
+/* ====== Mobile nhỏ ====== */
+@media (max-width: 576px) {
+  .admin-menu-container {
+    width: 200px;
+  }
+
+  .outlet-container {
+    padding: 15px;
+  }
+}
+
+/* ====== Desktop lớn (>=1200px) ====== */
+@media (min-width: 1200px) {
+  .admin-menu-container {
+    width: 250px;
+  }
+  .outlet-container {
+    margin-left: 250px;
+  }
+}

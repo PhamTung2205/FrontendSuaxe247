@@ -1,0 +1,325 @@
+.service-card-horizontal {
+transition: all 0.3s ease;
+border-radius: 10px;
+overflow: hidden;
+border: 1px solid #e9ecef !important;
+min-height: 200px;
+}
+
+.service-card-horizontal:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+border-color: #007bff !important;
+}
+
+/* Ảnh responsive tốt - Giữ layout desktop */
+.service-image-wrapper {
+padding: 20px;
+}
+
+.service-image-container {
+border-radius: 8px;
+overflow: hidden;
+min-height: 160px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.service-image {
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+transform: scale(1.05);
+}
+
+.service-image-placeholder {
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px dashed #dee2e6;
+}
+
+.book-button-wrapper {
+padding-right: 10px;
+padding-bottom: 10px;
+}
+
+.btn-book-service {
+background-color: #f8f9fa;
+border: 1px solid #dee2e6;
+color: #495057;
+padding: 12px 24px;
+font-size: 1rem;
+transition: all 0.3s ease;
+white-space: nowrap;
+border-radius: 8px;
+font-weight: 500;
+}
+
+.btn-book-service:hover {
+background-color: #e9ecef;
+border-color: #adb5bd;
+color: #495057;
+transform: translateY(-1px);
+}
+
+.service-details {
+margin-top: auto;
+}
+
+.card-body {
+padding: 1.5rem !important;
+}
+
+.service-name {
+font-size: 1.25rem;
+line-height: 1.4;
+}
+
+/* Thanh tìm kiếm to hơn với hiệu ứng hover */
+.search-input-group {
+transition: all 0.3s ease;
+border: 2px solid #e9ecef;
+border-radius: 12px;
+overflow: hidden;
+}
+
+.search-input-group:hover {
+border-color: #007bff;
+box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.search-input-group:focus-within {
+border-color: #007bff;
+box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.search-container .input-group-lg {
+height: 60px;
+}
+
+.search-container .input-group-lg .form-control {
+height: 60px;
+font-size: 1.1rem;
+padding: 0.75rem 1rem;
+border: none;
+}
+
+.search-container .input-group-lg .form-control:focus {
+box-shadow: none;
+background-color: #f8f9fa;
+}
+
+.search-container .input-group-lg .input-group-text {
+height: 60px;
+padding: 0 1.5rem;
+font-size: 1.2rem;
+border: none;
+background-color: #f8f9fa;
+transition: all 0.3s ease;
+}
+
+.search-input-group:hover .input-group-text {
+background-color: #e3f2fd;
+color: #007bff;
+}
+
+.search-container .input-group-lg .btn {
+height: 60px;
+padding: 0 1.5rem;
+font-size: 1.2rem;
+border: none;
+background-color: #f8f9fa;
+transition: all 0.3s ease;
+}
+
+.search-input-group:hover .btn {
+background-color: #e3f2fd;
+color: #007bff;
+}
+
+/* Nội dung dịch vụ */
+.service-description-container {
+max-width: 700px;
+}
+
+.service-description {
+line-height: 1.6;
+word-wrap: break-word;
+overflow-wrap: break-word;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+/* Desktop lớn - Ảnh to rõ */
+@media (min-width: 1200px) {
+.service-image-container {
+    min-height: 180px;
+    max-height: 180px;
+}
+
+.service-image-wrapper {
+    padding: 25px;
+}
+}
+
+/* Desktop thường */
+@media (min-width: 992px) and (max-width: 1199px) {
+.service-image-container {
+    min-height: 160px;
+    max-height: 160px;
+}
+
+.service-image-wrapper {
+    padding: 20px;
+}
+}
+
+/* Tablet - Ảnh vẫn rõ, layout giữ nguyên */
+@media (max-width: 991px) and (min-width: 768px) {
+.service-image-container {
+    min-height: 140px;
+    max-height: 140px;
+}
+
+.service-image-wrapper {
+    padding: 15px;
+}
+
+.service-name {
+    font-size: 1.15rem;
+}
+
+.service-details {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 8px !important;
+}
+}
+
+/* Mobile lớn - Ảnh vẫn đẹp */
+@media (max-width: 767px) and (min-width: 576px) {
+.service-image-container {
+    min-height: 130px;
+    max-height: 130px;
+}
+
+.service-image-wrapper {
+    padding: 12px;
+}
+
+.service-name {
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 1.25rem !important;
+}
+
+.service-details {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 8px !important;
+}
+
+.book-button-wrapper {
+    padding-right: 0;
+    padding-bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-book-service {
+    width: 100%;
+    padding: 10px 20px;
+}
+}
+
+/* Mobile nhỏ - Tối ưu cho màn hình nhỏ */
+@media (max-width: 575px) {
+.service-card-horizontal {
+    min-height: auto;
+}
+
+.service-image-container {
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.service-image-wrapper {
+    padding: 10px;
+}
+
+.service-name {
+    font-size: 1.1rem;
+    margin-bottom: 1rem !important;
+}
+
+.card-body {
+    padding: 1rem !important;
+}
+
+.service-details {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 6px !important;
+    margin-top: 1rem;
+}
+
+.book-button-wrapper {
+    padding-right: 0;
+    padding-bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-book-service {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+}
+
+.mx-3 {
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+}
+
+/* Thanh tìm kiếm nhỏ hơn trên mobile */
+.search-container .input-group-lg {
+    height: 50px;
+}
+
+.search-container .input-group-lg .form-control {
+    height: 50px;
+    font-size: 1rem;
+}
+
+.search-container .input-group-lg .input-group-text {
+    height: 50px;
+    padding: 0 1rem;
+}
+
+.search-container .input-group-lg .btn {
+    height: 50px;
+    padding: 0 1rem;
+}
+}
+
+.pagination .page-item.active .page-link {
+background-color: #007bff;
+border-color: #007bff;
+}
+
+.pagination .page-link {
+color: #212121;
+}
+
+.pagination .page-link:hover {
+color: #0056b3;
+}

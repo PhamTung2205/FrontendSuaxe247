@@ -1,0 +1,22 @@
+.navbar-custom {
+  background-color: #FFDE59 !important;
+  z-index: 1030;
+}
+
+.menu-user {
+  transition: color 0.2s, font-weight 0.2s;
+  color: #212529; /* mặc định đen */
+}
+
+.menu-user:hover {
+  color: #FF3131 !important; /* xanh khi hover */
+}
+
+.menu-user.active {
+  color: #FF3131 !important; /* xanh khi active */
+  font-weight: 700;
+}
+.offcanvas-backdrop.show {
+  pointer-events: none !important;
+}
+
